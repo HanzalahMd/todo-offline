@@ -13,7 +13,7 @@ RxDB.plugin(RxDBValidateModule);
 RxDB.plugin(RxDBReplicationGraphQL);
 RxDB.plugin(require('pouchdb-adapter-idb'));
 
-const syncURL = 'https://todo-offline.hasura.app/v1/graphql';
+const syncURL = 'http://localhost:8080/v1/graphql';
 
  const batchSize = 5;
  const pullQueryBuilder = (userId) => {
@@ -133,7 +133,7 @@ const syncURL = 'https://todo-offline.hasura.app/v1/graphql';
      }
 
      setupGraphQLSubscription(auth, replicationState) {
-         const endpointUrl = 'wss://todo-offline.hasura.app/v1/graphql';
+         const endpointUrl = 'wss://localhost:8080/v1/graphql';
          const wsClient = new SubscriptionClient(endpointUrl, {
              reconnect: true,
              connectionParams: {
