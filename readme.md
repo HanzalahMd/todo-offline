@@ -1,4 +1,4 @@
-This is a simple todo react app with Hasura GraphQL backend and RxDB frontend. The frontend was bootstrapped with [Create React App]. and the backend is running through docker.
+This is a simple todo react app with Hasura GraphQL backend and RxDB frontend. The frontend was bootstrapped with [Create React App]. and the backend is running through docker. RxDB uses PouchDB under the hood to provide a NoSQL database on the client. It then provides an ability to replicate this data with either CouchDB or a GraphQL server. Read more on https://hasura.io/blog/building-an-offline-first-web-app-with-rxdb-hasura/#rxdb-setup
 
 ## Available Scripts
 
