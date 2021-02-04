@@ -133,7 +133,7 @@ const syncURL = 'http://localhost:8080/v1/graphql';
      }
 
      setupGraphQLSubscription(auth, replicationState) {
-         const endpointUrl = 'wss://localhost:8080/v1/graphql';
+         const endpointUrl = 'ws://localhost:8080/v1/graphql';
          const wsClient = new SubscriptionClient(endpointUrl, {
              reconnect: true,
              connectionParams: {
@@ -149,7 +149,7 @@ const syncURL = 'http://localhost:8080/v1/graphql';
                  console.log('SubscriptionClient.connectionCallback:');
              },
              reconnectionAttempts: 10000,
-             inactivityTimeout: 10 * 1000,
+             inactivityTimeout: 10 * 3000,
              lazy: true
          });
 
